@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+
+module purge
+
+module use /g/data3/hh5/public/modules
+module load easybuild
+module load intel-fc
+module load runofftools/0.1
+module load nco
+
+module list
+
+INPUTDIR=../grids
+DATADIR=/g/data1/ua8/JRA55-do/RYF/v1-1/
+SUPPLDIR=/g/data1/ua8/MOM/runoff/JRA55-do/suppl/
+
+ln -sf $INPUTDIR/grid_spec.nc mosaic.nc
+ln -sf $INPUTDIR/ocean_mosaic.nc .
+ln -sf $INPUTDIR/topog.nc .
+ln -sf $INPUTDIR/ocean_hgrid.nc . 
+ln -sf $DATADIR/$1 runoff.nc
+ln -sf $SUPPLDIR/runoff_cell_area.15Dec2016.notime.nc area.nc
+
+# Create the model coast file:
+create_model_coast tripolar
+create_model_wet
+
+make_mask -f runoff.nc -v friver  
+ncks -A -v area area.nc runoff_mask.nc
+
+# Create nearest neighbour
+
+create_runoff_nn -f model_coast.nc
+create_runoff_weights -m 1 -w 1 -n 1
+
+process_runoff -v friver -i runoff.nc -o runoff_regrid.nc

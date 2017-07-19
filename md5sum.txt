@@ -1,0 +1,9 @@
+39d4fc815775aacb7a1bb42dcd296d68  mom01/RYF0304/runoff_regrid.nc
+4f9e8f60c39b4660455618d3a9a6e505  mom01/RYF8485/runoff_regrid.nc
+6ce67b261e23a17e1fd07c256dc315a4  mom01/RYF9091/runoff_regrid.nc
+ea5dbd2896cd7f8ae70aedbed198a944  mom025/RYF0304/runoff_regrid.nc
+bd4b6e609000122c7bd807bb6a25cfc1  mom025/RYF8485/runoff_regrid.nc
+f00bd32695a094a3d2f83971b5ce0f5f  mom025/RYF9091/runoff_regrid.nc
+ec615a8e7f014cf7160efb9e8f559395  mom10/RYF0304/runoff_regrid.nc
+c4a5bce48844bad32e2b7f1fdfdebed7  mom10/RYF8485/runoff_regrid.nc
+38f112e77107bfa5f9acf8b34c2218d2  mom10/RYF9091/runoff_regrid.nc

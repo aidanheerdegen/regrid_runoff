@@ -1,0 +1,9 @@
+#!/bin/bash
+# Run this file to generate regridded runoff data
+
+for dir in mom*/RYF????/
+do
+  echo "cd $dir; bash README"
+  (cd $dir; bash README)
+done
+

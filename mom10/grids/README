@@ -1,0 +1,11 @@
+#!/bin/bash
+
+MOSAICDIR=/home/502/aph502/v45_short/mom/input/mom10/mosaic/
+
+cp ${MOSAICDIR}/grid_spec.nc .
+cp ${MOSAICDIR}/ocean_hgrid.nc .
+cp ${MOSAICDIR}/ocean_mosaic.nc .
+cp ${MOSAICDIR}/topog.nc .      
+
+md5sum *.nc > md5sum.txt
+
