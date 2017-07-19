@@ -1,0 +1,20 @@
+Run 
+
+./make_runoff
+
+to generate regridded runoff files for a series of RYF datasets for a number of MOM
+model grids. The subdirectories
+
+mom01
+mom025
+mom10
+
+correspond to 0.1, 0.25 and 1.0 deg grids respectively.
+
+
+Aidan Heerdegen
+
+aidan.heerdegen@anu.edu.au
+climate_help@nci.org.au
+
+07/19/17
