@@ -7,3 +7,5 @@ do
   (cd $dir; bash README)
 done
 
+md5sum mom*/RYF*/runoff_regrid.nc > md5sum.txt
+
