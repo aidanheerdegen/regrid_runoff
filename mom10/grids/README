@@ -1,11 +1,12 @@
 #!/bin/bash
 
-MOSAICDIR=/home/502/aph502/v45_short/mom/input/mom10/mosaic/
+DATADIR=/g/data1/ua8/MOM/grids/10/
+MOSAICDIR=${DATADIR}/mosaic
+TOPOGDIR=${DATADIR}/topog/GFDL50
 
-cp ${MOSAICDIR}/grid_spec.nc .
-cp ${MOSAICDIR}/ocean_hgrid.nc .
-cp ${MOSAICDIR}/ocean_mosaic.nc .
-cp ${MOSAICDIR}/topog.nc .      
+ln -sf ${MOSAICDIR}/grid_spec.nc .
+ln -sf ${MOSAICDIR}/ocean_hgrid.nc .
+ln -sf ${MOSAICDIR}/ocean_mosaic.nc .
+ln -sf ${TOPOGDIR}/topog.nc .      
 
 md5sum *.nc > md5sum.txt
-

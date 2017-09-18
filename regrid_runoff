@@ -34,3 +34,5 @@ create_runoff_nn -f model_coast.nc
 create_runoff_weights -m 1 -w 1 -n 1
 
 process_runoff -v friver -i runoff.nc -o runoff_regrid.nc
+
+rm area.nc model_coast.nc model_wet.nc mosaic.nc ocean_hgrid.nc ocean_mosaic.nc runoff.nc runoff_connection_nn.nc runoff_mask.nc runoff_weights.nc topog.nc
